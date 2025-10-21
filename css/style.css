@@ -1,0 +1,158 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+h1,
+h2,
+h3 {
+  font-weight: 700; /* bold */
+}
+p {
+  font-weight: 400; /* normal */
+}
+.nav-link {
+  font-weight: 600;
+  transition: background-color 0.1s, border-radius 0.1s;
+}
+.nav-link:hover {
+  border-radius: 50rem;
+  background-color: var(--bs-light);
+  color: var(--bs-primary) !important;
+  transition: background-color 0.1s, border-radius 0.1s;
+}
+#hero-section .hero-about {
+  text-align: justify;
+  text-justify: inter-word;
+}
+#hero-section h1 {
+  font-size: 4.25rem;
+  line-height: 1;
+}
+#hero-section p {
+  max-width: 35rem;
+}
+#hero-section .gap-hero-about {
+  gap: 12rem;
+}
+#hero-section .hero-image img {
+  animation: floating 3s ease-in-out infinite;
+  box-shadow: 
+    0 -20px 50px 20px rgba(13, 110, 253, 0.5),
+    0 -40px 80px 40px rgba(13, 110, 253, 0.3);
+}
+@media (max-width: 1200px) {
+  #hero-section .gap-hero-about {
+    gap: 8rem !important;
+  }
+}
+@media (max-width: 992px) {
+  #hero-section .gap-hero-about {
+    gap: 6rem !important;
+  }
+}
+@media (max-width: 767.2px) {
+  #hero-section .hero-about {
+    order: 2 !important;
+  }
+  #hero-section .hero-image {
+    order: 1 !important;
+    margin-top: 50px !important;
+  }
+  #hero-section .gap-hero-about {
+    gap: 0rem !important;
+  }
+  #hero-section .hero-image img {
+    width: 150px !important;
+    height: 150px !important;
+    margin-bottom: 2rem !important;
+    animation: floating 3s ease-in-out infinite;
+  }
+  #hero-section .hero-about {
+    text-align: center !important;
+  }
+  #hero-section h1 {
+    font-size: 3.25rem !important;
+    line-height: 1 !important;
+  }
+  #hero-section p {
+    max-width: 35rem !important;
+  }
+}
+@media (max-width: 576px) {
+  #hero-section .gap-hero-about {
+    gap: 0rem !important;
+  }
+  #hero-section .hero-about {
+    order: 2 !important;
+  }
+  #hero-section .hero-image {
+    order: 1 !important;
+    margin-top: 50px !important;
+  }
+  #hero-section .hero-image img {
+    width: 150px !important;
+    height: 150px !important;
+    margin-bottom: 2rem !important;
+  }
+  #hero-section .hero-about {
+    text-align: center !important;
+  }
+  #hero-section h1 {
+    font-size: 2.25rem !important;
+    line-height: 1 !important;
+  }
+  #hero-section p {
+    max-width: 25rem !important;
+  }
+}
+#download-cv:hover {
+  background-color: #0a58ca !important;
+  color: var(--bs-light);
+  border-color: var(--bs-primary);
+}
+.badge:hover {
+  background-color: #0a58ca !important;
+  color: var(--bs-light) !important;
+}
+.text-article {
+  text-align: justify;
+  text-justify: inter-word;
+}
+#experience-section article::before {
+  content: "";
+  position: absolute;
+  left: -32px; /* geser ke kiri agar pas di garis border-start */
+  top: 5px; /* atur posisi vertikal */
+  width: 14px;
+  height: 14px;
+  background-color: var(--bs-primary); /* pakai warna primary Bootstrap */
+  border: 3px solid var(--bs-dark); /* biar ada outline, sesuaikan dengan background */
+  border-radius: 50%; /* bikin lingkaran */
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slideIn 1s ease-out forwards;
+  opacity: 0;
+}
